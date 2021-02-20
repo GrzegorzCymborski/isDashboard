@@ -1,3 +1,5 @@
-const CURRENT_TASK = 'CURRENT_TASK';
+const types = {
+  CURRENT_TASK: "CURRENT_TASK",
+};
 
-export default { CURRENT_TASK };
+export default types;

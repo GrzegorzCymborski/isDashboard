@@ -1,7 +1,9 @@
-const FETCH_USERS = "FETCH_USERS";
-const ADD_USER = "ADD_USER";
-const DELETE_USER = "DELETE_USER";
-const EDIT_USER = "EDIT_USER";
-const SORT_USER = "SORT_USER";
+const types = {
+  FETCH_USERS: "FETCH_USERS",
+  ADD_USER: "ADD_USER",
+  DELETE_USER: "DELETE_USER",
+  EDIT_USER: "EDIT_USER",
+  SORT_USER: "SORT_USER",
+};
 
-export default { FETCH_USERS, ADD_USER, DELETE_USER, EDIT_USER, SORT_USER };
+export default types;

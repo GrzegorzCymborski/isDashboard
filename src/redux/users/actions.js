@@ -25,4 +25,12 @@ const sortUsers = (payload) => ({
   payload,
 });
 
-export default { fetchUsers, addUser, deleteUser, editUser, sortUsers };
+const actions = {
+  fetchUsers,
+  addUser,
+  deleteUser,
+  editUser,
+  sortUsers,
+};
+
+export default actions;
