@@ -27,16 +27,19 @@ const EditUser = ({ setEditingUser }) => {
     company: { name: cName = "", catchPhrase = "", bs = "" } = "",
   } = activeTask;
 
+  const handleSubmit = (val) => {
+    val.id = activeTask.id;
+    dispatch(actions.editUser(val));
+    updateUser(val);
+    setEditingUser();
+    dispatch(taskActions.currentTask({}));
+  };
+
   return (
     <Formik
       validationSchema={editUserSchema}
       validateOnChange
-      onSubmit={(values) => {
-        values.id = activeTask.id;
-        dispatch(actions.editUser(values));
-        updateUser(values);
-        setEditingUser();
-      }}
+      onSubmit={(values) => handleSubmit(values)}
       initialValues={{
         name,
         username,
